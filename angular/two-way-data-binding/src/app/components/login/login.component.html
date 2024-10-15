@@ -1,0 +1,21 @@
+<!--1. Property binding(interpolacion): print value in a content place
+Sintaxis moustache -->
+<p>{{valoracion}}</p>
+
+
+<!--Property binding:  it's possible to apply the
+  variable value inside an element attribute -->
+<img [src]="imgurl" />
+
+<!--2. Event binding:  la comunicación se realiza en
+  el sentido contrario al property binding. Es decir,
+  ahora la informacion viaja desde el html al TS, y
+  para hacer dicha comunicación se utilizan eventos
+  activados por el usuario. Utilizamos el paréntesis
+  para este data binding -->
+<button (click) = "showUserInfo()"> button </button>
+
+<!--3. Two way data binding: sintaxis 'banana in a box' >>> [()]-->
+<br/>
+<input [(ngModel)]="nombre">
+valor de la variable : {{nombre}}

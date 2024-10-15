@@ -1,0 +1,30 @@
+<div class="row mt-5 mx-5 " style="background-color: black">
+    <input [(ngModel)]="operacion" class="col-12 mb-2"/>
+    <div class="col-12">
+        <button (click)="addNum(7)" class="btn btn-dark mx-1 mb-1">7</button>
+        <button (click)="addNum(8)" class="btn btn-dark mx-1 mb-1">8</button>
+        <button (click)="addNum(9)" class="btn btn-dark mx-1 mb-1">9</button>
+        <button class="btn btn-dark mx-1 mb-1">CE</button>
+    </div>
+
+    <div class="col-12">
+        <button (click)="addNum(4)" class="btn btn-dark mx-1 mb-1">4</button>
+        <button (click)="addNum(5)" class="btn btn-dark mx-1 mb-1">5</button>
+        <button (click)="addNum(6)" class="btn btn-dark mx-1 mb-1">6</button>
+        <button class="btn btn-dark mx-1 mb-1">DEL</button>
+    </div>
+
+    <div class="col-12">
+        <button (click)="addNum(1)" class="btn btn-dark mx-1 mb-1">1</button>
+        <button (click)="addNum(2)" class="btn btn-dark mx-1 mb-1">2</button>
+        <button (click)="addNum(3)" class="btn btn-dark mx-1 mb-1">3</button>
+        <button (click)="sumar()" class="btn btn-dark mx-1 mb-1">+</button>
+    </div>
+
+    <div class="col-12">
+        <button type="button" class="btn btn-dark mx-1 mb-1">.</button>
+        <button (click)="addNum(0)" class="btn btn-dark mx-1 mb-1">0</button>
+        <button type="button" class="btn btn-dark mx-1 mb-1">=</button>
+        <button (click)="restar()" class="btn btn-dark mx-1 mb-1">-</button>
+    </div>
+
