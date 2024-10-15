@@ -1,0 +1,58 @@
+<div class="container mt-5 pt-3">
+
+    <input [(ngModel)]="operacion" class="text-right mb-3 w-100" style="font-size: 25px;"/>
+
+    <div class="row text-align">
+        <div class="col-3 mb-2"> <!--col-3 para 4-->
+            <button (click)="addNum(7)" class="btn btn-dark">7</button>
+        </div>
+        <div class="col-3 mb-2">
+            <button (click)="addNum(8)" class="btn btn-dark">8</button>
+        </div>
+        <div class="col-3 mb-2">
+            <button (click)="addNum(9)" class="btn btn-dark">9</button>
+        </div>
+        <div class="col-3 mb-2">
+            <button (click)="borrar()" class="btn btn-bd-danger">AC</button>
+        </div>
+
+        <div class="col-3 mb-2">
+            <button (click)="addNum(4)" class="btn btn-dark">4</button>
+        </div>
+        <div class="col-3 mb-2">
+            <button (click)="addNum(5)" class="btn btn-dark">5</button>
+        </div>
+        <div class="col-3 mb-2">
+            <button (click)="addNum(6)" class="btn btn-dark">6</button>
+        </div>
+        <div class="col-3 mb-2">
+            <button (click)="borrarUltimo()" class="btn btn-bd-primary">DEL</button>
+        </div>
+
+        <div class="col-3 mb-2">
+            <button (click)="addNum(1)" class="btn btn-dark">1</button>
+        </div>
+        <div class="col-3 mb-2">
+            <button (click)="addNum(2)" class="btn btn-dark">2</button>
+        </div>
+        <div class="col-3 mb-2">
+            <button (click)="addNum(3)" class="btn btn-dark">3</button>
+        </div>
+        <div class="col-3 mb-2">
+            <button (click)="sumar()" class="btn btn-bd-primary">+</button>
+        </div>
+
+        <div class="col-3 mb-2">
+            <button (click)="addNum('.')" class="btn btn-dark">.</button>
+        </div>
+        <div class="col-3 mb-2">
+            <button (click)="addNum(0)" class="btn btn-dark">0</button>
+        </div>
+        <div class="col-3 mb-2">
+            <button (click)="calcular()" class="btn btn-bd-sucess">=</button>
+        </div>
+        <div class="col-3 mb-2">
+            <button (click)="restar()" class="btn btn-bd-primary">-</button>
+        </div>
+    </div>
+</div>
