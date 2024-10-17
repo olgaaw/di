@@ -1,0 +1,28 @@
+<div class="containe fluid">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead>
+                    <th>Country</th>
+                    <th>Phone perfix</th>
+                </thead>
+                <tbody>
+                    @for(country of countryPhoneList;track country.name) {
+                        <tr>
+                            <td>
+                                <img [src]="getFlagImage(country.flag)" /> {{country.name}}
+                            </td>
+                            <td>@for(prefix of country.prefix; track prefix) {
+                                }
+                            
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

@@ -5,21 +5,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { TableComponent } from './components/table/table.component';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatTableModule} from '@angular/material/table';
+import { ProgressBarComponent } from './components/progress-bar/progress-bar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent
+    ProgressBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    MatCheckboxModule,
-    MatTableModule
+    FormsModule
   ],
   providers: [
     provideAnimationsAsync()
@@ -27,4 +25,3 @@ import {MatTableModule} from '@angular/material/table';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-

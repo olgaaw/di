@@ -4,27 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { TableComponent } from './components/table/table.component';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatTableModule} from '@angular/material/table';
+import { PhonePrefixListComponent } from './components/phone-prefix-list/phone-prefix-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TableComponent
+    PhonePrefixListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,
-    MatCheckboxModule,
-    MatTableModule
+    NgbModule
   ],
-  providers: [
-    provideAnimationsAsync()
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
