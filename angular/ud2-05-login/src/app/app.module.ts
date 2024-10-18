@@ -8,6 +8,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginComponent } from './components/login/login.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatButtonModule} from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -21,7 +24,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     AppRoutingModule,
     NgbModule,
     MatToolbarModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatButtonModule,
+    FormsModule,
+    MatIconModule
   ],
   providers: [
     provideAnimationsAsync()

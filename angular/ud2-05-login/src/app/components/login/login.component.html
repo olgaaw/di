@@ -1,0 +1,25 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-12">
+      <mat-toolbar color="primary" class="mb-4">
+        <span class="mx-auto">Login</span>
+      </mat-toolbar>
+
+      <form>
+        <mat-form-field class="w-100">
+          <p>Email</p>
+          <mat-label>Email</mat-label>
+          <input matInput [(ngModel)]="email" name="email" type="email" placeholder="pat@example.com" required>
+        </mat-form-field>
+
+        <mat-form-field class="w-100">
+          <p>Contraseña</p>
+          <mat-label>Contraseña</mat-label>
+          <input matInput [(ngModel)]="password" name="password" type="password" required>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" class="w-50 mt-3" (click)="onLogin()">Login</button>
+      </form>
+    </div>
+  </div>
+</div>
