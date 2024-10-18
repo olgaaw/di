@@ -1,0 +1,14 @@
+<div class="row">
+        @for(item of listadoCasas; track item.id) {
+            <div class="col-md-3 col-12">
+                <div class="card" style="width: 18rem;">
+                    <img [src]="item.photo" class="card-img-top" alt="item.name">
+                    <div class="card-body">
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <p class="card-text">{{item.state}}</p>
+                    <a href="#" class="btn btn-primary">Call</a>
+                    </div>
+                </div>
+            </div>
+        }
+</div>

@@ -1,0 +1,16 @@
+<div class="row">
+    @for(item of listadoVehiculos; track item.name) {
+        <div class="col-md-3 col-12">
+            <div class="card" style="width: 18rem;">
+                <img [src]="getVehiculoImage(getVehiculoId(item.url))" class="card-img-top" alt="{{item.name}}"
+                >
+                <div class="card-body">
+                <h5 class="card-title">{{item.model}}</h5>
+                
+                <a href="#" class="btn btn-primary">Ver</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
