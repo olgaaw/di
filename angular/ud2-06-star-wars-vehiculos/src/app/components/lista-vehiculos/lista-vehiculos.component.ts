@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Vehiculo } from '../../vehiculo.interface';
 import { VehiculosService } from '../../services/vehiculos.service.service';
 
@@ -7,7 +7,7 @@ import { VehiculosService } from '../../services/vehiculos.service.service';
   templateUrl: './lista-vehiculos.component.html',
   styleUrl: './lista-vehiculos.component.css'
 })
-export class ListaVehiculosComponent {
+export class ListaVehiculosComponent implements OnInit{
   listadoVehiculos: Vehiculo[] = [];
 
   constructor(private vehiculosService: VehiculosService) {}

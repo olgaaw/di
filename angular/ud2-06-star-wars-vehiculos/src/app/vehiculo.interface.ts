@@ -1,4 +1,4 @@
-export interface ListaVehiculo {
+export interface ListaVehiculoResponse {
     count: number
     next: string
     previous: any

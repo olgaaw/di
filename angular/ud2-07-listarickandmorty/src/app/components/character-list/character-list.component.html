@@ -1,0 +1,17 @@
+
+<div class="row">
+    @for(item of characterList; track item.id) {
+        <div class="col-md-3 col-12 mt-3">
+            <div class="card w-100" style="width: 18rem;">
+                <img src="{{ item.image }}" class="card-img-top" alt="{{item.id}}"/>
+                <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <p class="card-title">Status: {{item.status}}</p>
+                <p class="card-title">Species: {{item.species}}</p>
+                <p class="card-title">Gender: {{item.gender}}</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
