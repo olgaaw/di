@@ -1,0 +1,9 @@
+<div class="text-center">
+    <div class="d-flex justify-content-around align-items-center">
+        <app-pokemon [pokemon]="pokemon1" [health]="pokemon1Health" (attack)="attack(1)"></app-pokemon>
+        <span>VS</span>
+        <app-pokemon [pokemon]="pokemon2" [health]="pokemon2Health" (attack)="attack(2)"></app-pokemon>
+    </div>
+    <p>{{ message }}</p>
+</div>
+

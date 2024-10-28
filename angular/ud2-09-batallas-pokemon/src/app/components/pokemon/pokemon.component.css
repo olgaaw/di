@@ -1,0 +1,19 @@
+.container {
+    width: 200px;
+}
+
+.no-health {
+    background-color: grey;
+}
+
+.low-health {
+    background-color: red; 
+}
+
+.medium-health {
+    background-color: orange; 
+}
+
+.high-health {
+    background-color: green; 
+}
