@@ -17,8 +17,8 @@ export class PokemonBattleComponent implements OnInit {
   constructor(private pokemonService: PokemonService) {}
 
   ngOnInit(): void {
-    var random1 = Math.floor(Math.random() * 648) + 1;
-    var random2 = Math.floor(Math.random() * 648) + 1;
+    var random1 = Math.floor(Math.random() * 904) + 1;
+    var random2 = Math.floor(Math.random() * 904) + 1;
     
     this.pokemonService.getPokemon(random1).subscribe(response => { 
       this.pokemon1 = response; 
