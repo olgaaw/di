@@ -3,7 +3,7 @@
     <img [src]="pokemon.sprites.other.showdown.front_default" alt="{{ pokemon.name }}">
     <p class="mt-3">Salud: {{ health }}</p>
     <div class="progress mb-3" role="progressbar">
-        <div class="progress-bar" [ngStyle]="{ 'width': health + '%' }"  [ngClass]="{'no-health': health! <= 0,'low-health': health! <= 25,'medium-health': health! <= 50 && health! > 25, 'high-health': health! > 50}"></div>
+        <div class="progress-bar" [style]="{ 'width': health + '%' }"  [class]="{'no-health': health! <= 0,'low-health': health! <= 25,'medium-health': health! <= 50 && health! > 25, 'high-health': health! > 50}"></div>
     </div>
     <button (click)="onAttack()" [disabled]="health! <= 0">Atacar</button>
 </div>

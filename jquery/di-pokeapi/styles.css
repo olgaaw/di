@@ -72,7 +72,6 @@ body {
 
 .normal-box, .fire-box, .water-box, .grass-box, .electric-box, .ice-box, .fighting-box, .ground-box, .poison-box, .flying-box, .psychic-box, .bug-box, .rock-box, .ghost-box, .dragon-box, .dark-box, .steel-box, .fairy-box{
     padding: 5px 10px;
-    margin-top: ;
     width: 85px;
     text-align: center;
     color: white;
