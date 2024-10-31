@@ -1,0 +1,46 @@
+<div class="row mx-auto mt-5">
+    <div class=" col-3 mx-auto">
+        <form (ngSubmit)="onSubmit()" class="d-flex flex-column border border-2 p-2">
+            <label for="nombre"> Nombre: </label>
+            <input type="text" name="nombre" id="nombre" [(ngModel)]="usuario.nombre" required />
+
+            <label for="apellidos"> Apellidos: </label>
+            <input type="text" name="apellidos" id="apellidos" [(ngModel)]="usuario.apellidos" required />
+
+            <label for="nif"> NIF: </label>
+            <input type="text" name="nif" id="nif" [(ngModel)]="usuario.nif" (input)="calcularLetraNIF()" required maxlength="8" />
+            <span> Letra: {{ letraNIF }}</span> 
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" [(ngModel)]="usuario.email" required />
+        
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="tel" name="tel" [(ngModel)]="usuario.telefono" required />
+
+            <div>
+                <label>Sexo:</label> <br>
+                <label for="masculino"> <input type="radio" id="masculino" name="sexo" [(ngModel)]="usuario.sexo" value="Masculino" required /> Masculino </label> <br>
+                <label for="femenino"> <input type="radio" id="femenino" name="sexo" [(ngModel)]="usuario.sexo" value="Femenino" /> Femenino </label>
+            </div>
+
+            <label for="conocidoPor">¿Cómo conociste la página?</label>
+            <select id="conocidoPor" name="conocidoPor" [(ngModel)]="usuario.conocidoPor" required>
+                <option value="google"> Buscando en Google </option>
+                <option value="amigo"> A través de un amigo </option>
+                <option value="profesor"> Por mi profesor </option> <br>
+            </select> 
+
+            <label for="password"> Contraseña: </label>
+            <input type="password" id="password" name="password" [(ngModel)]="usuario.password" required />
+        
+            <label for="confirmPassword"> Confirmar Contraseña: </label>
+            <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="usuario.confirmPassword" required />
+        
+            <label> <input type="checkbox" name="terminos" [(ngModel)]="usuario.terminos" required /> Acepto los términos y condiciones</label>
+        
+            <button type="submit"> Registrarse </button>
+        </form>
+        <div *ngIf="mensajeError" class="error">{{ mensajeError }}</div>
+    </div>
+</div>
+
