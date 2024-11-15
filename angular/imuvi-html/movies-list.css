@@ -17,10 +17,12 @@ body {
     background-color: #303030;
     border-radius: 20px;
     overflow: visible;
+    width: 300px;
 }
 
 .movie-card img {
     width: 100%;
+    
 }
 
 .movie-title {
@@ -63,7 +65,7 @@ header {
     margin-top: 15px;
 }
 
-*{
+* {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
