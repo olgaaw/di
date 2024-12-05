@@ -18,10 +18,14 @@ body {
     border-radius: 20px;
     overflow: visible;
     width: 300px;
+   
 }
 
 .movie-card img {
-    width: 100%;
+    width: 85%;
+    margin: 20px;
+    align-items: center;
+    border-radius: 20px;
     
 }
 
@@ -74,3 +78,4 @@ i{
     color: white;
     margin-top: 15px;
 }
+
