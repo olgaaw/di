@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 20),
+                  margin: const EdgeInsets.only(top: 20, bottom: 10),
                   child: const Text(
                     'Already have a Path account?',
                     style: TextStyle(color: Color.fromARGB(170, 255, 255, 255)),
@@ -109,19 +109,24 @@ class _MyHomePageState extends State<MyHomePage> {
                   height: 55,
                   child: ElevatedButton(
                     onPressed: () {},
-                    style: ButtonStyle(
-                      backgroundColor: const WidgetStatePropertyAll<Color>(
-                          Color(0xffE62F16)),
-                      shape: WidgetStateProperty.all(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(5))),
-                    ),
-                    child: const Text(
-                      'Log in',
-                      style: TextStyle(
-                          color: Color.fromARGB(170, 255, 255, 255),
-                          fontSize: 20
-                      )  
-                    ),
+                     style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(250, 55),
+                  backgroundColor: const Color(0xFFE62F16),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  side: const BorderSide(
+                    color: Colors.white60,
+                    width: 1,
+                  ),
+                ),
+                child: const Text(
+                  'Log in',
+                  style: TextStyle(
+                    fontSize: 22,
+                    color: Colors.white60,
+                  ),
+                ),
                   ),
                 ),
 
