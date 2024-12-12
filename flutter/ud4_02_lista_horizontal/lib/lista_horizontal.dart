@@ -31,7 +31,6 @@ class ListaHorizontal extends StatelessWidget {
             SizedBox(
               height: 500,
               child: ListView(
-                  padding: const EdgeInsets.all(8),
                   scrollDirection: Axis.horizontal,
                   children: <Widget>[
                     Row(children: [
@@ -43,9 +42,7 @@ class ListaHorizontal extends StatelessWidget {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(100),
                               image: const DecorationImage(
-                                image: AssetImage(
-                                    'assets/images/emilia-clark.jpg'),
-                                fit: BoxFit.cover,
+                                image: AssetImage('assets/images/emilia-clark.jpg'),
                               ),
                             ),
                             height: 400,
