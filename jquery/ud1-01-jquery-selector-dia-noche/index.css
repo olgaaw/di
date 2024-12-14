@@ -1,0 +1,9 @@
+.modo-noche {
+    color: white;
+    background-color: black;
+}
+
+.modo-dia {
+    color: black;
+    background-color: white;
+}
