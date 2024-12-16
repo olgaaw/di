@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:star_wars/models/people_list_response/people_list_response.dart';
+import 'package:star_wars/screens/people_detail_screen.dart';
 
 class PeopleScreen extends StatefulWidget {
   const PeopleScreen({super.key});
@@ -56,7 +57,7 @@ class _PeopleScreenState extends State<PeopleScreen> {
   }
 
   Future<PeopleListResponse> getPeople() async {
-    final response = await http.get(Uri.parse('https://swapi.dev/api/people'));
+    final response = await http.get(Uri.parse('https://swapi.tech/api/people'));
 
     if (response.statusCode == 200) {
       return PeopleListResponse.fromJson(response.body);
@@ -95,7 +96,8 @@ class _PeopleScreenState extends State<PeopleScreen> {
               ),
               const SizedBox(height: 25),
               Text(
-                peopleListResponse.results![index].name!,
+                //peopleListResponse.results![index].name!,
+                "personaje",
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 20,
@@ -109,7 +111,8 @@ class _PeopleScreenState extends State<PeopleScreen> {
                 children: [
                   Chip(
                     label: Text(
-                      peopleListResponse.results![index].gender!,
+                      "genero",
+                      //peopleListResponse.results![index].gender!,
                       style: const TextStyle(color: Colors.white),
                     ),
                     backgroundColor: Colors.grey[900],
@@ -120,7 +123,8 @@ class _PeopleScreenState extends State<PeopleScreen> {
                   const SizedBox(width: 8),
                   Chip(
                     label: Text(
-                      peopleListResponse.results![index].birthYear!,
+                      //peopleListResponse.results![index].birthYear!,
+                      "año",
                       style: const TextStyle(color: Colors.white),
                     ),
                     backgroundColor: Colors.grey[900],
@@ -132,7 +136,14 @@ class _PeopleScreenState extends State<PeopleScreen> {
               ),
               const SizedBox(height: 15),
               ElevatedButton(
-                onPressed: () {},
+                 onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => PersonDetailScreen(personId: peopleId),
+                    ),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.red,
                   minimumSize: const Size(275, 50),
