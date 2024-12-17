@@ -57,7 +57,7 @@ class _PeopleScreenState extends State<PeopleScreen> {
   }
 
   Future<PeopleListResponse> getPeople() async {
-    final response = await http.get(Uri.parse('https://swapi.tech/api/people'));
+    final response = await http.get(Uri.parse('https://swapi.py4e.com/api/people'));
 
     if (response.statusCode == 200) {
       return PeopleListResponse.fromJson(response.body);
@@ -96,8 +96,7 @@ class _PeopleScreenState extends State<PeopleScreen> {
               ),
               const SizedBox(height: 25),
               Text(
-                //peopleListResponse.results![index].name!,
-                "personaje",
+                peopleListResponse.results![index].name!,
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 20,
@@ -111,8 +110,7 @@ class _PeopleScreenState extends State<PeopleScreen> {
                 children: [
                   Chip(
                     label: Text(
-                      "genero",
-                      //peopleListResponse.results![index].gender!,
+                      peopleListResponse.results![index].gender!,
                       style: const TextStyle(color: Colors.white),
                     ),
                     backgroundColor: Colors.grey[900],
@@ -123,8 +121,7 @@ class _PeopleScreenState extends State<PeopleScreen> {
                   const SizedBox(width: 8),
                   Chip(
                     label: Text(
-                      //peopleListResponse.results![index].birthYear!,
-                      "año",
+                      peopleListResponse.results![index].birthYear!,
                       style: const TextStyle(color: Colors.white),
                     ),
                     backgroundColor: Colors.grey[900],

@@ -21,7 +21,7 @@ class _PersonDetailScreenState extends State<PersonDetailScreen> {
   }
 
   Future<People> getPersonDetails() async {
-    final response = await http.get(Uri.parse('https://swapi.tech/api/people/${widget.personId}/'));
+    final response = await http.get(Uri.parse('https://swapi.py4e.com/api/people/${widget.personId}/'));
 
     if (response.statusCode == 200) {
       return People.fromJson(response.body);
