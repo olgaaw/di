@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'home_screen.dart';
 
 class MainMenuScreen extends StatefulWidget {
   const MainMenuScreen({super.key});
@@ -10,14 +10,10 @@ class MainMenuScreen extends StatefulWidget {
 
 class _MainMenuScreenState extends State<MainMenuScreen> {
   int _selectedIndex = 0;
-  static const List<Widget> _widgetOptions = <Widget>[
-    //PostScreen(),
-    Text(
-      'Index 1: Business',
-    ),
-    Text(
-      'Index 2: School',
-    ),
+
+  static final List<Widget> _widgetOptions = <Widget>[
+    const HomeScreen(),
+    const Text("movies")
   ];
 
   @override
@@ -25,9 +21,14 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 19, 19, 19),
       appBar: AppBar(
-          backgroundColor: Colors.black,
-          title: Image.asset("assets/images/logo.png",
-              width: 100, height: 35, fit: BoxFit.fill)),
+        backgroundColor: Colors.black,
+        title: Image.asset(
+          "assets/images/logo.png",
+          width: 100,
+          height: 35,
+          fit: BoxFit.fill,
+        ),
+      ),
       body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.black,
@@ -35,9 +36,7 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
         showUnselectedLabels: false,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-            ),
+            icon: Icon(Icons.home),
             label: '',
           ),
           BottomNavigationBarItem(
